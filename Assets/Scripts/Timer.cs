@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-   public float time { get; set; }
+   public float time  { get; set; }
+   public bool  Reset { get; set; }
    
    public void StartTimer()
    {
