@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5013948450488660096
+  m_GuidHigh: 11408243884628678581
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4738636046453439192
+      m_GuidHigh: 14844583515550427310
+    m_SerializedTextureGuid:
+      m_GuidLow: 14300086087435226773
+      m_GuidHigh: 5453967412812229226
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: PS
+    m_Texture: {fileID: 2800000, guid: 0b150e951c88c6746aaa3a317762b04b, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5547810224401199673
+      m_GuidHigh: 15640779331296124581
+    m_SerializedTextureGuid:
+      m_GuidLow: 14385776954749997615
+      m_GuidHigh: 18436807598825782298
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: PP
+    m_Texture: {fileID: 2800000, guid: d5dfd22f8bebc7a41abc3b28d4b2dcff, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5219399650561344723
+      m_GuidHigh: 5149944303849084059
+    m_SerializedTextureGuid:
+      m_GuidLow: 6427927688205025603
+      m_GuidHigh: 8700042005223627403
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: PET
+    m_Texture: {fileID: 2800000, guid: 015bc143962d59348bda54e41bc2bc78, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5499408070903830756
+      m_GuidHigh: 10699769278193914267
+    m_SerializedTextureGuid:
+      m_GuidLow: 11715171133961943066
+      m_GuidHigh: 1944307955873719387
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: OTHER
+    m_Texture: {fileID: 2800000, guid: a2b6381aa613a2945ba4d1d3c891fb1a, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5027477572149045561
+      m_GuidHigh: 6824969429201058716
+    m_SerializedTextureGuid:
+      m_GuidLow: 6265798098827280779
+      m_GuidHigh: 6626331476407539673
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: NONCOLORPET
+    m_Texture: {fileID: 2800000, guid: 5aeb018b962c56f4d9d742b75e75f55b, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5626384945801220162
+      m_GuidHigh: 9820607891583887799
+    m_SerializedTextureGuid:
+      m_GuidLow: 13314043102130688498
+      m_GuidHigh: 10837932982464917418
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: LDPE
+    m_Texture: {fileID: 2800000, guid: 1abd51f2fba9b8c4aaaf4f2fa0126896, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5345432186719080896
+      m_GuidHigh: 16135121084364226691
+    m_SerializedTextureGuid:
+      m_GuidLow: 7562693464661082837
+      m_GuidHigh: 12202437301980017435
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: HDPE
+    m_Texture: {fileID: 2800000, guid: 224ac2d515a368f41bb37e2a13c457a9, type: 3}
