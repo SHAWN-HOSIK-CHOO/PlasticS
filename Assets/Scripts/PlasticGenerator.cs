@@ -2,24 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
-
-public class Pair<T, U>
-{
-    public T first  { get; set; }
-    public U second { get; set; }
- 
-    public Pair(T _first, U _second) {
-        this.first  = _first;
-        this.second = _second;
-    }
- 
-    public override string ToString() {
-        return $"({first}, {second})";
-    }
-};
 
 public class PlasticGenerator : MonoBehaviour
 {
@@ -45,6 +31,8 @@ public class PlasticGenerator : MonoBehaviour
                                                            new Vector3(0, -4, 9),
                                                            new Vector3(8, -3, 9)
                                                        };
+    
+    public GameObject panel;
 
     private void Awake()
     {
@@ -57,7 +45,7 @@ public class PlasticGenerator : MonoBehaviour
             _spawnObjects.Add(newObj.name, newObj);
         }
     }
-
+    
     private void Update()
     {
         KeepPositions();
@@ -107,22 +95,35 @@ public class PlasticGenerator : MonoBehaviour
     {
         foreach (GameObject obj in plasticInstances)
         {
-            if (obj.CompareTag(ttag) && _spawnObjects[obj.name].activeSelf)
+            if (obj.CompareTag(ttag) && _spawnObjects[obj.name].activeSelf && obj.CompareTag(firstTag))
             {
                 //Debug.Log("Removed object with tag : " + ttag);
                 int curObjectPositionIndex = _spawnObjects[obj.name].GetComponent<PrefabMetaData>().positionIndex;
                 _positionIndexSlot[curObjectPositionIndex] = false;
                 _spawnObjects[obj.name].SetActive(false);
                 
-                if (ttag == firstTag)
-                {
-                    // Score
-                    GameManager.sScore++;
-                    GameManager.sExtraScoreCount++;
-                    Debug.Log("New Score plused with plastic : "+ ttag + "Current Score : " + GameManager.sScore);
-                }
+                // Score
+                GameManager.sScore++;
+                GameManager.sExtraScoreCount++;
+                //Debug.Log("New Score plused with plastic : "+ ttag + "Current Score : " + GameManager.sScore);
+                DisplayInformation(ttag);
             }
         }
  
+    }
+    
+    private void DisplayInformation(string nname)
+    {
+        panel.SetActive(true);
+        StartCoroutine(DisplayAndWaitSeconds(nname));
+    }
+
+    IEnumerator DisplayAndWaitSeconds(string nname)
+    {
+        GameObject info = panel.transform.Find(nname).gameObject;
+        info.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        info.SetActive(false);
+        panel.SetActive(false);
     }
 }

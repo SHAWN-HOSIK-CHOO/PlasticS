@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-   public static readonly int  sMaxRoundCount   = 10;
+   public static readonly int  sMaxRoundCount   = 2;
    public static          int  sCurRoundCount   = 1;
    public static          bool sMoveToNextRound = false;
    public static          int  sScore           = 0;

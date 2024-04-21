@@ -30,8 +30,8 @@ public class MultipleImageTracker : MonoBehaviour
    {
       _moveOn        = true;
       GameManager.sCurRoundCount++;
-      isFirstTracked  = true;
-      firstTrackedTag = "";
+      GameManager.sExtraScoreCount = 0;
+      isFirstTracked               = true;
    }
 
    private void OnTrackedImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
@@ -60,9 +60,8 @@ public class MultipleImageTracker : MonoBehaviour
 
    private void UpdateSpawnObject(ARTrackedImage trackedImage)
    {
-      //Debug.Log("UpdateSpawnObject called");
       string referenceImageName = trackedImage.referenceImage.name;
-      
+      Debug.Log("First Tag : " + referenceImageName);
       StartCoroutine(UpdateCoroutine(referenceImageName));
    }
 
@@ -79,7 +78,7 @@ public class MultipleImageTracker : MonoBehaviour
       plasticGenerator.GeneratePlastics();
       _moveOn        = false;
    }
-
+   
    private void OnEnable()
    {
       trackedImageManager.trackedImagesChanged += OnTrackedImageChanged;

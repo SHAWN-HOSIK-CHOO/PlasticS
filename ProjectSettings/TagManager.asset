@@ -7,10 +7,10 @@ TagManager:
   - PP
   - HDPE
   - LDPE
-  - NONCOLORPET
   - OTHER
   - PET
   - PS
+  - PVC
   layers:
   - Default
   - TransparentFX
